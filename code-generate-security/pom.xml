@@ -9,8 +9,8 @@
     </parent>
     <artifactId>code-generate-security</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>code-generate-security</name>
-    <description>Demo project for Spring Boot</description>
+    <name>Code-Generate-Security</name>
+    <description>Security Modules</description>
 
     <properties>
         <!-- 定义sa-token版本号 -->
@@ -29,6 +29,12 @@
             <groupId>cn.dev33</groupId>
             <artifactId>sa-token-spring-aop</artifactId>
             <version>${sa-token-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.qianlingo.codegenerate</groupId>
+            <artifactId>code-generate-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
     </dependencies>

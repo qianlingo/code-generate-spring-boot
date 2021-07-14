@@ -10,11 +10,14 @@ import cn.dev33.satoken.annotation.SaCheckLogin;
 import cn.dev33.satoken.annotation.SaCheckPermission;
 import cn.dev33.satoken.annotation.SaCheckRole;
 import cn.dev33.satoken.annotation.SaCheckSafe;
+import org.springframework.stereotype.Component;
 
 /**
- * 继承Sa-Token行为Bean默认实现, 重写部分逻辑 
+ * 继承Sa-Token行为Bean默认实现, 重写部分逻辑
+ * @author QianLinGooo
+ * @since create in 2021/07/14
  */
-//@Component
+@Component
 public class MySaTokenAction extends SaTokenActionDefaultImpl {
 
 	/**
