@@ -1,0 +1,20 @@
+
+
+spring:
+  profiles:
+    active: dev
+
+mybatis-plus:
+  type-aliases-package: com.qianlingo.codegenerate.**.**.domain
+  mapper-locations: classpath*:/mybatis/mapper/**/*Mapper.xml
+  global-config:
+    db-config:
+      insert-strategy: default
+      update-strategy: default
+  configuration:
+    map-underscore-to-camel-case: true
+
+# sa-token 框架配置
+sa-token:
+  # token名称
+  token-name: QL-T0Ken

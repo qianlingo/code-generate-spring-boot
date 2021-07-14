@@ -1,0 +1,47 @@
+server:
+  # 端口号
+  port: 1997
+#本配置文件适用于内部的开发环境
+spring:
+  main:
+    banner-mode: off
+  devtools:
+    livereload:
+      enabled: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: 'jdbc:mysql://rm-bp18m0fgc80s8x9sejo.mysql.rds.aliyuncs.com:3306/db_code_generation?useUnicode=true&useSSL=false&characterEncoding=utf8&allowMultiQueries=true&serverTimezone=Asia/Shanghai'
+    username: 'code_generation'
+    password: 'Ql@#2021'
+    druid:
+      min-idle: 10
+      max-active: 100
+      initial-size: 10
+      max-wait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validation-query: SELECT 1
+      filters: stat
+      filter:
+        stat:
+          log-slow-sql: true
+        wall:
+          config:
+            multi-statement-allow: true
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+  mvc:
+    throw-exception-if-no-handler-found: true
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+mybatis-plus:
+  global-config:
+    banner: off
+
+logging:
+  level:
+    com.qianlingo.codegenerate.modules.mybatis.mapper: debug
+    org.springframework: error
