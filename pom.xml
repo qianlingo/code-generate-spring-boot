@@ -21,6 +21,8 @@
     <modules>
         <module>code-generate-common</module>
         <module>code-generate-security</module>
+        <module>code-generate-modules</module>
+        <module>code-generate-api</module>
     </modules>
 
     <packaging>pom</packaging>
