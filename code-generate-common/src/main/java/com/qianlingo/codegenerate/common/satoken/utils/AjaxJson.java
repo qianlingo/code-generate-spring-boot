@@ -206,20 +206,5 @@ public class AjaxJson extends LinkedHashMap<String, Object> implements Serializa
 	public static AjaxJson getByBoolean(boolean b){
 		return b ? getSuccess("ok") : getError("error"); 
 	}
-	
-	
-	
-	
-	
-	
-	
-//  // 历史版本遗留代码 
-//	public int code; 	// 状态码
-//	public String msg; 	// 描述信息 
-//	public Object data; // 携带对象
-//	public Long dataCount;	// 数据总数，用于分页 
 
-	
-	
-	
 }

@@ -1,30 +1,20 @@
-package com.qianlingo.codegenerate.modules.mybatis.domain.sys.team;
+package com.qianlingo.codegenerate.modules.mybatis.vo.sys.team;
 
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.Version;
-import java.time.LocalDateTime;
-import java.io.Serializable;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
+
+import java.time.LocalDateTime;
 
 /**
- * <p>
- * 项目组表
- * </p>
- *
+ * 项目组 SearchVO
  * @author QianLinGooo
- * @since 2021-07-15
+ * @since create in 2021/7/15
  */
 @Data
-@EqualsAndHashCode(callSuper = false)
-public class SysTeam implements Serializable {
-
-    private static final long serialVersionUID = 1L;
+public class SysTeamSearchVO {
 
     /**
      * 编号
      */
-    @TableId
     private String id;
 
     /**
@@ -56,6 +46,5 @@ public class SysTeam implements Serializable {
      * 状态(0:禁用,1:启用)
      */
     private Integer status;
-
 
 }
