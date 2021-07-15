@@ -71,7 +71,7 @@ public class SysUser implements Serializable {
     /**
      * 项目组编码
      */
-    private String projectGroupCode;
+    private String projectTeamId;
 
     /**
      * 删除状态(0-正常,1-已删除)
