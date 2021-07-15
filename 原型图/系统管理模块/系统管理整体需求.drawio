@@ -1,0 +1,115 @@
+<mxfile>
+    <diagram id="Wu-ztO2DAlugfXzIEWRb" name="数据库表关系">
+        <mxGraphModel dx="1138" dy="714" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="37" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="475" y="160" width="330" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;span&gt;sys_team&lt;/span&gt;&lt;br&gt;&lt;span&gt;项目组表&lt;/span&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+                    <mxGeometry x="370" y="10" width="60" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="" style="shape=flexArrow;endArrow=classic;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="399.5" y="110" as="sourcePoint"/>
+                        <mxPoint x="399.5" y="160" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="22" value="" style="shape=flexArrow;endArrow=classic;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="350.5" as="sourcePoint"/>
+                        <mxPoint x="450" y="350.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="36" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="11" y="160" width="359" height="382" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="36">
+                    <mxGeometry width="359" height="382" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="36">
+                    <mxGeometry x="6" y="54.25" width="346" height="93.75" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="sys_user&lt;br&gt;用户表" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="36">
+                    <mxGeometry x="20" y="58" width="60" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="sys_role&lt;br&gt;角色表" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="36">
+                    <mxGeometry x="270" y="58" width="60" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="sys_user_role&lt;br&gt;用户角色关联表" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="36">
+                    <mxGeometry x="130" y="58" width="90" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="36" source="12" target="14">
+                    <mxGeometry x="6" y="54.25" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="36" source="13" target="14">
+                    <mxGeometry x="6" y="54.25" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="36">
+                    <mxGeometry x="9.5" y="221" width="339" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="sys_role&lt;br&gt;角色表" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="36">
+                    <mxGeometry x="30" y="230" width="60" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="sys_permission&lt;br&gt;资源表" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="36">
+                    <mxGeometry x="240" y="230" width="91" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="sys_role_&lt;br&gt;permission&lt;br&gt;角色资源关联表" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="36">
+                    <mxGeometry x="125" y="230" width="90" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="36" source="26" target="28">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="36" source="27" target="28">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="" style="shape=flexArrow;endArrow=classic;html=1;" edge="1" parent="36">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="174.5" y="162" as="sourcePoint"/>
+                        <mxPoint x="174.5" y="212" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="43" value="" style="shape=flexArrow;endArrow=classic;html=1;" edge="1" parent="36">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="639" y="166" as="sourcePoint"/>
+                        <mxPoint x="639" y="216" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="42" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="510" y="200" width="270" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="42">
+                    <mxGeometry width="270" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="sys_project&lt;br&gt;项目表" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="42">
+                    <mxGeometry x="12" y="20" width="70" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="sys_project&lt;br&gt;项目表" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="42">
+                    <mxGeometry x="100" y="20" width="70" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="sys_project&lt;br&gt;项目表" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="42">
+                    <mxGeometry x="190" y="20" width="70" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="510" y="390" width="270" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="44">
+                    <mxGeometry width="270" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="datasource&lt;br&gt;项目数据源表" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="44">
+                    <mxGeometry x="12" y="20" width="70" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="datasource&lt;br&gt;项目数据源表" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="44">
+                    <mxGeometry x="100" y="20" width="70" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="datasource&lt;br&gt;项目数据源表" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="44">
+                    <mxGeometry x="190" y="20" width="70" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="1. 系统的顶级权限为【项目组】，类似于内控系统的【部门】；项目组的查阅权限只有【管理员】级别的用户可以查看、操作。&lt;br&gt;2. 用户只能查看当前【项目组】下的【角色】、【用户】、【字典】、【构建代码方案管理】、【构建代码管理】的数据。&lt;br&gt;3. 同一个用户名只能存在于一个【项目组】，如需要跨项目组操作，需在新的项目组域内创建账号。&lt;br&gt;4. 权限的上下关系为——【项目组】-&amp;gt;【角色】-&amp;gt;【用户】，【角色】决定了【用户】可以查看、操作的菜单资源。&lt;br&gt;5. 同一个【项目】在【项目内】唯一；对应Web项目内多数据源，【项目数据源】可以创建多个；是否使用项目配置的【项目数据源】可在【项目】表内设置，分两种情况：(a) 【项目】表内设置为以配置的数据源进行读取，系统将按设置的驱动类型去读取【表】配置。(b) 【项目】表设置为以本项目配置的数据源进行【表】读取。" style="whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="11" y="590" width="799" height="120" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
