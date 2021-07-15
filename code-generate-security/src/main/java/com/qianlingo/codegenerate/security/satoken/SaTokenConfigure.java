@@ -2,6 +2,7 @@ package com.qianlingo.codegenerate.security.satoken;
 
 import cn.dev33.satoken.router.SaRouter;
 import cn.dev33.satoken.stp.StpUtil;
+import com.qianlingo.codegenerate.common.constant.ApiConstant;
 import com.qianlingo.codegenerate.common.satoken.utils.AjaxJson;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -42,7 +43,9 @@ public class SaTokenConfigure implements WebMvcConfigurer {
                 // .addExclude("/favicon.ico")
                 // 认证函数: 每次请求执行
                 .setAuth(r -> {
-                    SaRouter.match("/**", "/system/login/loginAction", StpUtil::checkLogin);
+                    SaRouter.match("/**"
+                            , ApiConstant.API_CONSTANT+"/system/login/loginAction"
+                            , StpUtil::checkLogin);
                 })
 
                 // 异常处理函数：每次认证函数发生异常时执行此函数

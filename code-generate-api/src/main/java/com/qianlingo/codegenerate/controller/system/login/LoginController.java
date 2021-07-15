@@ -4,6 +4,7 @@ import cn.dev33.satoken.stp.SaTokenInfo;
 import cn.dev33.satoken.stp.StpUtil;
 import cn.hutool.core.util.IdUtil;
 import cn.hutool.extra.ssh.Sftp;
+import com.qianlingo.codegenerate.common.constant.ApiConstant;
 import com.qianlingo.codegenerate.common.satoken.utils.AjaxJson;
 import com.qianlingo.codegenerate.modules.mybatis.domain.sys.user.SysUser;
 import com.qianlingo.codegenerate.modules.mybatis.dto.system.login.SystemLoginDTO;
@@ -27,7 +28,7 @@ import javax.validation.Valid;
  * @since create in 2021/7/14
  */
 @RestController
-@RequestMapping("/system/login")
+@RequestMapping(ApiConstant.API_CONSTANT + "/system/login")
 public class LoginController {
 
     @Resource
@@ -45,12 +46,11 @@ public class LoginController {
 
         StpUtil.login(sysUser.getId());
 
-
         SaTokenInfo token = StpUtil.getTokenInfo();
 
         StpUtil.getSession().set("onlineUser" , sysUser);
 
-        return AjaxJson.getSuccess("success", token);
+        return AjaxJson.getSuccess("success", token.getTokenValue());
 
     }
 
