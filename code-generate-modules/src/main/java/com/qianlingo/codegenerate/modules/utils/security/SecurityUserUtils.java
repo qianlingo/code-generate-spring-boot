@@ -18,4 +18,10 @@ public class SecurityUserUtils {
         return (SysUser) StpUtil.getSession().get("onlineUser");
     }
 
+    /**
+     * 获取当前用户编号
+     * @return
+     */
+    public static String getUserId(){ return getUserData().getId();}
+
 }

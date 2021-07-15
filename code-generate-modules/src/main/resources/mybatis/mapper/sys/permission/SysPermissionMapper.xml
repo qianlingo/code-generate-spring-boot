@@ -1,5 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.qianlingo.codegenerate.modules.mybatis.mapper.sys.permission.SysPermissionMapper">
+    <select id="getSysPermissionListDataByUserId"
+            resultType="com.qianlingo.codegenerate.modules.mybatis.vo.sys.permission.SysPermissionVO">
+        select sp.id,
+               sp.parent_id,
+               sp.name,
+               sp.url,
+               sp.component,
+               sp.component_name,
+               sp.redirect,
+               sp.menu_type,
+               sp.perms,
+               sp.perms_type,
+               sp.sort_no,
+               sp.always_show,
+               sp.icon,
+               sp.is_route,
+               sp.is_leaf,
+               sp.keep_alive,
+               sp.hidden,
+               sp.description,
+               sp.create_by,
+               sp.create_time,
+               sp.update_by,
+               sp.update_time,
+               sp.del_flag,
+               sp.rule_flag,
+               sp.status,
+               sp.internal_or_external
+        from sys_permission sp
+        <where>
+            sp.id in (
+                select srp.permission_id from sys_role_permission srp
+                <where>
+                    srp.role_id in (
+                        select sur.role_id from sys_user_role sur
+                        <where>
+                            sur.user_id = #{userId,jdbcType=VARCHAR}
+                        </where>
+                    )
+                </where>
+            )
+        </where>
+    </select>
 
+    <select id="getSysPermissionStringDataByUserId"
+            resultType="string">
+        select sp.perms
+        from sys_permission sp
+        <where>
+            sp.id in (
+            select srp.permission_id from sys_role_permission srp
+            <where>
+                srp.role_id in (
+                select sur.role_id from sys_user_role sur
+                <where>
+                    sur.user_id = #{userId,jdbcType=VARCHAR}
+                </where>
+                )
+            </where>
+            )
+        </where>
+    </select>
+
+    <select id="getSysPermissionListDataByRoleId"
+            resultType="com.qianlingo.codegenerate.modules.mybatis.vo.sys.permission.SysPermissionVO">
+        select sp.id,
+        sp.parent_id,
+        sp.name,
+        sp.url,
+        sp.component,
+        sp.component_name,
+        sp.redirect,
+        sp.menu_type,
+        sp.perms,
+        sp.perms_type,
+        sp.sort_no,
+        sp.always_show,
+        sp.icon,
+        sp.is_route,
+        sp.is_leaf,
+        sp.keep_alive,
+        sp.hidden,
+        sp.description,
+        sp.create_by,
+        sp.create_time,
+        sp.update_by,
+        sp.update_time,
+        sp.del_flag,
+        sp.rule_flag,
+        sp.status,
+        sp.internal_or_external
+        from sys_permission sp
+        <where>
+            sp.id in (
+            select srp.permission_id from sys_role_permission srp
+            <where>
+              srp.role_id = #{roleId,jdbcType=VARCHAR}
+            </where>
+            )
+        </where>
+    </select>
 </mapper>
