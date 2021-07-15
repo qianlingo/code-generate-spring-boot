@@ -1,5 +1,6 @@
 package com.qianlingo.codegenerate.handler;
 
+import cn.dev33.satoken.exception.NotPermissionException;
 import cn.hutool.crypto.digest.DigestUtil;
 import com.qianlingo.codegenerate.common.exception.login.UserNameOrPasswordErrorException;
 import com.qianlingo.codegenerate.common.exception.login.UserNotFoundException;
@@ -74,6 +75,17 @@ public class LoginHandler {
     @ResponseBody
     public AjaxJson bindException(UserNameOrPasswordErrorException e) {
         return AjaxJson.getError(e.getMessage());
+    }
+
+    /**
+     * 用户 用户名或密码错误异常
+     * @param e     错误异常
+     * @return      返回消息
+     */
+    @ExceptionHandler(NotPermissionException.class)
+    @ResponseBody
+    public AjaxJson notPermissionException(NotPermissionException e) {
+        return AjaxJson.getError("无权限的请求！");
     }
 
 }
