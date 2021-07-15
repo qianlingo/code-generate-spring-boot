@@ -22,7 +22,7 @@ import javax.annotation.Resource;
 import javax.validation.Valid;
 
 /**
- * 登录 - Login Controller
+ * 登录操作 路由控制类
  * @author QianLinGooo
  * @since create in 2021/7/14
  */
@@ -45,7 +45,10 @@ public class LoginController {
 
         StpUtil.login(sysUser.getId());
 
+
         SaTokenInfo token = StpUtil.getTokenInfo();
+
+        StpUtil.getSession().set("onlineUser" , sysUser);
 
         return AjaxJson.getSuccess("success", token);
 
