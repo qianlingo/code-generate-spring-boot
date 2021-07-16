@@ -31,6 +31,6 @@ public class SysTeamServiceImpl extends ServiceImpl<SysTeamMapper, SysTeam> impl
     @Override
     public AjaxJson getSysTeamPageData(SysTeamSearchDTO sysTeamSearchDTO) {
         Page<SysTeamSearchVO> sysTeamPageData = this.baseMapper.getSysTeamPageData(sysTeamSearchDTO);
-        return AjaxJson.getPageData(sysTeamPageData.getSize(),sysTeamPageData);
+        return AjaxJson.getSuccess(AjaxJson.CODE_SUCCESS_MESSAGE , sysTeamPageData);
     }
 }

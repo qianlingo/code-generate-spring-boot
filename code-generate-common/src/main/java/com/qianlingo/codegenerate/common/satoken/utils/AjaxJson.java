@@ -32,6 +32,7 @@ public class AjaxJson extends LinkedHashMap<String, Object> implements Serializa
 	private static final long serialVersionUID = 1L;	// 序列化版本号
 	
 	public static final int CODE_SUCCESS = 200;			// 成功状态码
+	public static final String CODE_SUCCESS_MESSAGE = "success";			// 成功状态码
 	public static final int CODE_ERROR = 500;			// 错误状态码
 	public static final int CODE_WARNING = 501;			// 警告状态码
 	public static final int CODE_NOT_JUR = 403;			// 无权限状态码
