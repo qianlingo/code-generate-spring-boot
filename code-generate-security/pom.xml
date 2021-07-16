@@ -32,6 +32,17 @@
         </dependency>
 
         <dependency>
+            <groupId>cn.dev33</groupId>
+            <artifactId>sa-token-dao-redis-jackson</artifactId>
+            <version>1.22.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>com.qianlingo.codegenerate</groupId>
             <artifactId>code-generate-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
